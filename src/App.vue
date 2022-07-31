@@ -69,6 +69,14 @@ export default {
   padding: 20px;
 }
 
+.italic {
+  font-style: oblique;
+}
+
+.bold {
+  font-weight: 500;
+}
+
 @media only screen and (max-width: $MEDIUM) {
   .overall-container {
     grid-template-columns: 1fr;

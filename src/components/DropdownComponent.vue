@@ -1,7 +1,7 @@
 <template>
   <div class="question-chunk">
     <div class="grid dropdown-title">
-      <span class="title">{{ title }}</span>
+      <span class="title bold">{{ title }}</span>
       <span class="input" @change="(e) => $emit('change', e)">
         <select>
           <option value="incomplete" selected disabled>Choose...</option>
@@ -11,7 +11,7 @@
         </select>
       </span>
     </div>
-    <div class="description" v-html="description"></div>
+    <div class="description italic" v-html="description"></div>
   </div>
 </template>
 
@@ -33,7 +33,6 @@ export default {
   text-align: left;
   font-size: 14px;
   color: grey;
-  font-style: oblique;
 }
 
 .dropdown-title {
@@ -44,7 +43,6 @@ export default {
 }
 
 .title {
-  font-weight: 500;
   text-align: left;
 }
 

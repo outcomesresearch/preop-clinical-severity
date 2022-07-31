@@ -5,6 +5,9 @@
 
       <div class="grid overall-container">
         <LeftPanel @severity-calculated="($event) => (severity = $event)" />
+        <div>
+          <ResultsTop :severity="severity" />
+        </div>
       </div>
     </div>
   </div>
@@ -12,11 +15,13 @@
 
 <script>
 import LeftPanel from "./components/LeftPanel.vue";
+import ResultsTop from "./components/ResultsTop.vue";
 
 export default {
   name: "App",
   components: {
     LeftPanel,
+    ResultsTop,
   },
   data() {
     return {

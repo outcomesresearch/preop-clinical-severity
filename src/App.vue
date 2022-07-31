@@ -4,7 +4,7 @@
       <img src="./assets/header-logo.svg" class="logo" />
 
       <div class="grid overall-container">
-        <LeftPanel />
+        <LeftPanel @severity-calculated="($event) => (severity = $event)" />
       </div>
     </div>
   </div>
@@ -17,6 +17,11 @@ export default {
   name: "App",
   components: {
     LeftPanel,
+  },
+  data() {
+    return {
+      severity: undefined,
+    };
   },
 };
 </script>

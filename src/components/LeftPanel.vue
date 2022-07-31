@@ -2,25 +2,46 @@
   <div>
     <div class="grid dropdown-layout">
       <dropdown-component
-        v-for="d in dropdowns"
+        v-for="d in dropdownOptions"
         :key="d.id"
         :title="d.title"
         :description="d.description"
         :options="d.options"
+        @change="(e) => addToAnswers(d.id, e)"
       />
     </div>
   </div>
 </template>
 
 <script>
-import dropdowns from "../assets/dropdownOptions.json";
+import dropdownOptions from "../assets/dropdownOptions.json";
 import DropdownComponent from "./DropdownComponent.vue";
+import resultsTree from "../assets/resultsTree.js";
 
 export default {
   components: { DropdownComponent },
   name: "LeftPanel",
   data() {
-    return { dropdowns };
+    return {
+      dropdownOptions,
+      dropdownValues: dropdownOptions.map(() => undefined),
+    };
+  },
+  watch: {
+    dropdownValues(dropdownAnswers) {
+      if (dropdownAnswers.every((a) => !!a)) {
+        const [functionalStatus, comorbidity, weightLoss, tnm] =
+          dropdownAnswers;
+        const severity =
+          resultsTree[functionalStatus][comorbidity][weightLoss][tnm];
+        this.$emit("severity-calculated", severity);
+      }
+    },
+  },
+  methods: {
+    addToAnswers(idOfEmitter, event) {
+      this.$set(this.dropdownValues, idOfEmitter, event.target.value);
+    },
   },
 };
 </script>

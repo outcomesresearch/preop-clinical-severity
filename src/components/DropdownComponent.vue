@@ -2,7 +2,7 @@
   <div class="question-chunk">
     <div class="grid dropdown-title">
       <span class="title">{{ title }}</span>
-      <span class="input">
+      <span class="input" @change="(e) => $emit('change', e)">
         <select>
           <option value="incomplete" selected disabled>Choose...</option>
           <option v-for="o in options" :key="o.id" :value="o.value">

@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": 0,
     "title": "Functional Status",
     "description": "Can the patient climb 1 to 2 flights of stairs without stopping, or walk brisky on level ground without feeling short of breath?",
     "options": [
@@ -9,7 +9,7 @@
     ]
   },
   {
-    "id": 2,
+    "id": 1,
     "title": "Comorbidity",
     "description": "Identify the important medical comorbidities and grade severity using the <a href='http://otooutcomes.wustl.edu/Research/Research-Focus/Cancer/Comorbidity-Calculator' target='_blank'>Comorbidity Calculator</a>",
     "options": [
@@ -20,7 +20,7 @@
     ]
   },
   {
-    "id": 3,
+    "id": 2,
     "title": "Pre-Op Weight Loss",
     "description": "Over the past 3 months, did the patient experience unintentional weight loss?",
     "options": [
@@ -29,7 +29,7 @@
     ]
   },
   {
-    "id": 4,
+    "id": 3,
     "title": "TNM Stage",
     "description": "Please use the AJCC version 7 Pathology Staging System.",
     "options": [

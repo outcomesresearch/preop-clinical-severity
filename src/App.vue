@@ -1,28 +1,75 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app" class="">
+    <div class="card">
+      <img src="./assets/header-logo.svg" class="logo" />
+
+      <div class="grid overall-container">
+        <LeftPanel />
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import LeftPanel from "./components/LeftPanel.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    LeftPanel,
+  },
+};
 </script>
 
-<style>
+<style lang="scss">
+@import "./assets/scss/breakpoints.scss";
+
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  max-width: 100%;
+  width: 900px;
+  margin: 20pt;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.grid {
+  display: grid;
+}
+
+.overall-container {
+  grid-template-columns: 1fr 3fr;
+  width: 100%;
+  grid-gap: 10px;
+}
+
+.logo {
+  width: 400px;
+  max-width: 100%;
+  float: left;
+  padding-bottom: 10px;
+}
+
+.card {
+  border-radius: 5px;
+  overflow: hidden;
+  max-width: 100%;
+  box-shadow: 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.14),
+    0 1px 5px 0 rgba(0, 0, 0, 0.12);
+
+  padding: 20px;
+}
+
+@media only screen and (max-width: $MEDIUM) {
+  .overall-container {
+    grid-template-columns: 1fr;
+  }
+  .card {
+    padding: 10px;
+  }
 }
 </style>

@@ -1,0 +1,126 @@
+{
+  ">=4METs": {
+    "none/mild": {
+      "no": {
+        "1or2": {
+          "class": "alpha",
+          "number": 0,
+          "day30": "5%|1.7% to 11%",
+          "day90": "20%|13% to 29%"
+        },
+        "3or4": {
+          "class": "beta",
+          "number": 1,
+          "day30": "9%|6% to 14%",
+          "day90": "26%|21% to 32%"
+        }
+      },
+      "yes": {
+        "1or2": {
+          "class": "beta",
+          "number": 1,
+          "day30": "9%|6% to 14%",
+          "day90": "26%|21% to 32%"
+        },
+        "3or4": {
+          "class": "gamma",
+          "number": 2,
+          "day30": "14%|10% to 20%",
+          "day90": "32%|26% to 39%"
+        }
+      }
+    },
+    "mod/severe": {
+      "no": {
+        "1or2": {
+          "class": "beta",
+          "number": 1,
+          "day30": "9%|6% to 14%",
+          "day90": "26%|21% to 32%"
+        },
+        "3or4": {
+          "class": "gamma",
+          "number": 2,
+          "day30": "14%|10% to 20%",
+          "day90": "32%|26% to 39%"
+        }
+      },
+      "yes": {
+        "1or2": {
+          "class": "gamma",
+          "number": 2,
+          "day30": "14%|10% to 20%",
+          "day90": "32%|26% to 39%"
+        },
+        "3or4": {
+          "class": "delta",
+          "number": 3,
+          "day30": "21%|13% to 32%",
+          "day90": "60%|49% to 70%"
+        }
+      }
+    }
+  },
+  "<4METs": {
+    "none/mild": {
+      "no": {
+        "1or2": {
+          "class": "beta",
+          "number": 1,
+          "day30": "9%|6% to 14%",
+          "day90": "26%|21% to 32%"
+        },
+        "3or4": {
+          "class": "gamma",
+          "number": 2,
+          "day30": "14%|10% to 20%",
+          "day90": "32%|26% to 39%"
+        }
+      },
+      "yes": {
+        "1or2": {
+          "class": "gamma",
+          "number": 2,
+          "day30": "14%|10% to 20%",
+          "day90": "32%|26% to 39%"
+        },
+        "3or4": {
+          "class": "delta",
+          "number": 3,
+          "day30": "21%|13% to 32%",
+          "day90": "60%|49% to 70%"
+        }
+      }
+    },
+    "mod/severe": {
+      "no": {
+        "1or2": {
+          "class": "gamma",
+          "number": 2,
+          "day30": "14%|10% to 20%",
+          "day90": "32%|26% to 39%"
+        },
+        "3or4": {
+          "class": "delta",
+          "number": 3,
+          "day30": "21%|13% to 32%",
+          "day90": "60%|49% to 70%"
+        }
+      },
+      "yes": {
+        "1or2": {
+          "class": "gamma",
+          "number": 2,
+          "day30": "14%|10% to 20%",
+          "day90": "32%|26% to 39%"
+        },
+        "3or4": {
+          "class": "delta",
+          "number": 3,
+          "day30": "21%|13% to 32%",
+          "day90": "60%|49% to 70%"
+        }
+      }
+    }
+  }
+}

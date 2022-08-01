@@ -9,6 +9,7 @@
 import c3 from "c3";
 import data from "../assets/data";
 import colors from "../assets/colors.json";
+import tooltip_contents from "../assets/tooltipConfig";
 import baseConfig from "../assets/baseConfig";
 
 export default {
@@ -39,6 +40,9 @@ export default {
       ];
       baseConfig.axis.y.max = data[stage][0].max;
       baseConfig.axis.y.min = data[stage][0].min;
+      baseConfig.tooltip.contents = function (...args) {
+        return tooltip_contents.bind(this, stage, ...args);
+      };
 
       c3.generate(baseConfig);
     },

@@ -1,19 +1,14 @@
 import Vue from "vue";
 import App from "./App.vue";
+import { toPercentage, toTitleCase, toPercentageRange } from "./assets/filters";
 
 Vue.config.productionTip = false;
 
-const toPercentage = (number) => `${number}%`;
-
-Vue.filter("titleCase", function (word) {
-  return [word[0].toUpperCase(), ...word.slice(1)].join("");
-});
+Vue.filter("titleCase", toTitleCase);
 
 Vue.filter("percentage", toPercentage);
 
-Vue.filter("percentageRange", function (array) {
-  return array.map(toPercentage).join(" to ");
-});
+Vue.filter("percentageRange", toPercentageRange);
 
 new Vue({
   render: (h) => h(App),

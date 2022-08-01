@@ -12,9 +12,7 @@ export default {
     order: null,
   },
   color: {},
-  tooltip: {
-    show: false,
-  },
+  tooltip: {},
   bar: {
     width: {
       ratio: 5,
@@ -43,7 +41,6 @@ export default {
       padding: { top: 0, bottom: 0 },
       tick: {
         count: 6,
-        format: (d) => (d * 100).toFixed(0),
       },
     },
   },

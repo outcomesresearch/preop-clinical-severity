@@ -25,7 +25,7 @@ export default {
   },
   data() {
     return {
-      severity: undefined,
+      severity: { number: -1 },
     };
   },
 };

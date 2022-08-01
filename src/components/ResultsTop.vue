@@ -2,7 +2,7 @@
   <div>
     <div class="top-banner bold">
       Clinical Severity Staging:
-      <span v-if="severity && severity.class" class="bold">{{
+      <span v-if="severityDefined" class="bold">{{
         severity.class | titleCase
       }}</span>
     </div>
@@ -10,7 +10,7 @@
       <div class="pane">
         <div class="label bold">30-Day Unplanned Readmission Rate:</div>
         <div id="day30" class="top-bottom-spaced center">
-          <span v-if="!severity" id="main" class="placeholder">N/A</span>
+          <span v-if="!severityDefined" id="main" class="placeholder">N/A</span>
           <div v-else class="grid number-container">
             <span id="main">{{ severity.day30.value | percentage }}</span>
             <span id="ci" class="italic percentage-range"
@@ -25,7 +25,7 @@
       <div class="pane">
         <div class="label bold">90-Day Complication Rate:</div>
         <div id="day90" class="top-bottom-spaced center">
-          <span v-if="!severity" id="main" class="placeholder">N/A</span>
+          <span v-if="!severityDefined" id="main" class="placeholder">N/A</span>
           <div v-else class="grid number-container">
             <span id="main">{{ severity.day90.value | percentage }}</span>
             <span id="ci" class="italic percentage-range"
@@ -45,6 +45,11 @@
 export default {
   name: "LeftPanel",
   props: ["severity"],
+  computed: {
+    severityDefined() {
+      return this.severity.number !== -1;
+    },
+  },
 };
 </script>
 

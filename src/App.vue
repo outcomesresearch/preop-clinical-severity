@@ -7,6 +7,7 @@
         <LeftPanel @severity-calculated="($event) => (severity = $event)" />
         <div>
           <ResultsTop :severity="severity" />
+          <Plot :severity="severity" />
         </div>
       </div>
     </div>
@@ -16,12 +17,14 @@
 <script>
 import LeftPanel from "./components/LeftPanel.vue";
 import ResultsTop from "./components/ResultsTop.vue";
+import Plot from "./components/Plot.vue";
 
 export default {
   name: "App",
   components: {
     LeftPanel,
     ResultsTop,
+    Plot,
   },
   data() {
     return {
@@ -33,6 +36,7 @@ export default {
 
 <style lang="scss">
 @import "./assets/scss/breakpoints.scss";
+@import "./assets/scss/c3.scss";
 
 #app {
   font-family: "Roboto", sans-serif;
@@ -84,6 +88,30 @@ export default {
 
 .bold {
   font-weight: 500;
+}
+
+// C3.js needs ot be in here
+.c3-tooltip th,
+.c3-tooltip td {
+  font-size: 10px;
+}
+
+/*alternative coloring for title of toolitp*/
+.c3-tooltip th {
+  /*background-color: gainsboro;
+    color: black;*/
+}
+
+.c3-line-difference,
+.c3-circles-difference,
+.c3-circles-lowerbound,
+.c3-line-lowerbound {
+  display: none;
+}
+
+.top-bottom-spaced {
+  margin-top: 8px;
+  margin-bottom: 8px;
 }
 
 @media only screen and (max-width: $MEDIUM) {

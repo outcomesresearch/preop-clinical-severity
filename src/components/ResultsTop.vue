@@ -56,11 +56,6 @@ export default {
 <style scoped lang="scss">
 @import "../assets/scss/breakpoints.scss";
 
-.top-bottom-spaced {
-  margin-top: 8px;
-  margin-bottom: 8px;
-}
-
 .split {
   grid-template-columns: 1fr 1fr;
   grid-gap: 5px;

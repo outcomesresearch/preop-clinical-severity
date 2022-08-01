@@ -38,13 +38,17 @@ export default {
   font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
+  text-align: left;
   color: #2c3e50;
   max-width: 100%;
   width: 900px;
   margin: 20pt;
   margin-left: auto;
   margin-right: auto;
+}
+
+.center {
+  text-align: center;
 }
 
 .grid {

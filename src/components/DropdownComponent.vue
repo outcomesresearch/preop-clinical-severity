@@ -30,7 +30,6 @@ export default {
 }
 
 .description {
-  text-align: left;
   font-size: 14px;
   color: grey;
 }
@@ -40,10 +39,6 @@ export default {
   align-items: center;
   margin-bottom: 10px;
   grid-gap: 5px;
-}
-
-.title {
-  text-align: left;
 }
 
 .input {

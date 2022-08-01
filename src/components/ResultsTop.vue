@@ -9,7 +9,7 @@
     <div class="grid split top-bottom-spaced">
       <div class="pane">
         <div class="label bold">30-Day Unplanned Readmission Rate:</div>
-        <div id="day30" class="top-bottom-spaced">
+        <div id="day30" class="top-bottom-spaced center">
           <span v-if="!severity" id="main" class="placeholder">N/A</span>
           <div v-else class="grid number-container">
             <span id="main">{{ severity.day30.value | percentage }}</span>
@@ -24,7 +24,7 @@
       </div>
       <div class="pane">
         <div class="label bold">90-Day Complication Rate:</div>
-        <div id="day90" class="top-bottom-spaced">
+        <div id="day90" class="top-bottom-spaced center">
           <span v-if="!severity" id="main" class="placeholder">N/A</span>
           <div v-else class="grid number-container">
             <span id="main">{{ severity.day90.value | percentage }}</span>
@@ -63,11 +63,6 @@ export default {
   border-bottom: 1px solid grey;
 }
 
-.top-banner,
-.label {
-  text-align: left;
-}
-
 .top-banner {
   padding: 5px;
   font-size: 18px;
@@ -95,7 +90,6 @@ export default {
 }
 
 .description {
-  text-align: left;
   font-size: 14px;
   color: grey;
 }

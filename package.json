@@ -21,6 +21,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "sass": "^1.32.13",
     "sass-loader": "^10",
+    "shared-code": "git+https://github.com/outcomesresearch/shared-code.git",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {

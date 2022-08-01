@@ -1,17 +1,19 @@
 <template>
-  <div id="app" class="">
-    <div class="card">
-      <img src="./assets/header-logo.svg" class="logo" />
+  <outcomes-research-wrapper :_title="`Clinical Severity Applet`">
+    <div id="app" class="">
+      <div class="card">
+        <img src="./assets/header-logo.svg" class="logo" />
 
-      <div class="grid overall-container">
-        <LeftPanel @severity-calculated="($event) => (severity = $event)" />
-        <div>
-          <ResultsTop :severity="severity" />
-          <Plot :severity="severity" />
+        <div class="grid overall-container">
+          <LeftPanel @severity-calculated="($event) => (severity = $event)" />
+          <div>
+            <ResultsTop :severity="severity" />
+            <Plot :severity="severity" />
+          </div>
         </div>
       </div>
     </div>
-  </div>
+  </outcomes-research-wrapper>
 </template>
 
 <script>

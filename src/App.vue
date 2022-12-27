@@ -1,9 +1,8 @@
 <template>
   <outcomes-research-wrapper :_title="`Clinical Severity Applet`">
+    <outcomes-navbar />
     <div id="app" class="">
       <div class="card">
-        <img src="./assets/header-logo.svg" class="logo" />
-
         <div class="grid overall-container">
           <LeftPanel @severity-calculated="($event) => (severity = $event)" />
           <div>
@@ -13,6 +12,7 @@
         </div>
       </div>
     </div>
+    <outcomes-footer :copyright="copyright" />
   </outcomes-research-wrapper>
 </template>
 
@@ -30,6 +30,7 @@ export default {
   },
   data() {
     return {
+      copyright: `Copyright © 2022, Washington University School of Medicine, St. Louis, Missouri`,
       severity: { number: -1 },
     };
   },
@@ -65,13 +66,6 @@ export default {
   grid-template-columns: 1fr 3fr;
   width: 100%;
   grid-gap: 10px;
-}
-
-.logo {
-  width: 400px;
-  max-width: 100%;
-  float: left;
-  padding-bottom: 10px;
 }
 
 .card {
